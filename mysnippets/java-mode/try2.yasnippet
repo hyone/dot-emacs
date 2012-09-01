@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: try { ... } catch ( ... ) { } finaly { }
+# key: try
+# group: structure
+# --
+try {
+$1
+} catch (${2:Exception} e) {
+$3
+} finally {
+$4
+}$0

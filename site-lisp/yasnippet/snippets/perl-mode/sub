@@ -1,0 +1,7 @@
+# name: sub ... { ... }
+# key: sub
+# --
+sub ${1:funcname}${1:$(if (> (string-width text) 0) " " "")}{
+`(when yas/prefix "aa")`
+$0
+}

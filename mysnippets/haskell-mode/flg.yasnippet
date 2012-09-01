@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: {-# LANGUAGE ... #-}
+# key: flg
+# --
+{-# ${1:LANGUAGE }$2${2:$(if (> (string-width text) 0) " " "")}#-}$0

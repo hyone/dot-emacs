@@ -1,0 +1,110 @@
+(eval-when-compile    (require 'color-theme))
+(defun color-theme-darkneon256 ()
+  "Color theme by hyone"
+  (interactive)
+  (setq frame-background-mode 'dark)
+  (color-theme-install
+   '(color-theme-darkneon256
+     ((background-color . "grey20")
+;;      ((background-color . "grey15")
+      (background-mode . dark)
+      (border-color . "black")
+      (cursor-color . "dark orange")
+      ;; set ime on/off colors
+      (add-hook 'mw32-ime-on-hook
+        (function (lambda () (set-cursor-color "midnight blue"))))
+      (add-hook 'mw32-ime-off-hook
+        (function (lambda () (set-cursor-color "dark orange"))))
+      (foreground-color . "grey78")
+      (mouse-color . "sienna1"))
+     (default ((t (nil))))
+     (bold ((t (:bold t :weight bold))))
+     (bold-italic ((t (:italic t :bold t :slant italic :weight bold))))
+     (border ((t (:background "black"))))
+     (buffer-menu-buffer ((t (:bold t :weight bold))))
+     (button ((t (:underline t))))
+     (completions-common-part ((t (:family "*" :width normal :weight normal :slant normal :underline nil :overline nil :strike-through nil :box nil :inverse-video nil :foreground "white" :background "black" :stipple nil :height 120))))
+     (completions-first-difference ((t (:bold t :weight bold))))
+
+     (font-lock-builtin-face           ((t (:foreground "#81d681"))))     ; lightgreen
+     (font-lock-comment-delimiter-face ((t (:foreground "#8b7e66"))))     ; hada iro
+     (font-lock-comment-face           ((t (:foreground "#8b7e66"))))
+     (font-lock-constant-face          ((t (:foreground "#6ea3ff"))))     ; light bule
+     (font-lock-doc-face               ((t (:foreground "LightSalmon"))))
+     (font-lock-doc-string-face        ((t (:foreground "LightSalmon"))))
+     (font-lock-function-name-face ((t (:foreground "#6ea3ff"))))
+     (font-lock-keyword-face ((t (:foreground "dark orange"))))
+     (font-lock-negation-char-face ((t (nil))))
+     (font-lock-preprocessor-face ((t (:foreground "khaki3"))))
+     (font-lock-reference-face ((t (:foreground "#6ea3ff"))))
+     (font-lock-regexp-grouping-backslash ((t (:bold t :weight bold))))
+     (font-lock-regexp-grouping-construct ((t (:bold t :weight bold))))
+     (font-lock-string-face ((t (:background "#000" :foreground "#ffcccc"))))
+     (font-lock-type-face ((t (:foreground "PaleGreen"))))
+     (font-lock-variable-name-face ((t (:foreground "burlywood3"))))
+     (font-lock-warning-face ((t (:bold t :foreground "Pink" :weight bold))))
+
+     (modeline ((t (:background "#333" :foreground "#aaa"))))
+     (mode-line-inactive ((t (:background "#000" :foreground "#444"))))
+     (modeline-buffer-id ((t (:background "grey10" :foreground "orange1"))))
+     (modeline-mousable ((t (:background "#000" :foreground "#555"))))
+     (modeline-mousable-minor-mode ((t (:background "#000" :foreground "#555"))))
+
+     (modeline-mousable ((t (:background "white" :foreground "black"))))
+     (modeline-mousable-minor-mode ((t (:background "white" :foreground "black"))))
+     (mouse ((t (:background "sienna1"))))
+     (my-face-b-1 ((t (:background "gray"))))
+     (my-face-b-2 ((t (:background "honeydew"))))
+     (my-face-u-1 ((t (:foreground "SteelBlue" :underline t))))
+
+     (region ((t (:background "#5A647E"))))
+
+     ;; elscreen
+     (elscreen-tab-background-face     ((t (:background "grey20"))))
+     (elscreen-tab-control-face        ((t (:background "grey30" :foreground "grey90"))))
+     (elscreen-tab-current-screen-face ((t (:background "grey10" :foreground "grey70"))))
+     (elscreen-tab-other-screen-face   ((t (:background "grey30" :foreground "grey50"))))
+
+     ;; jaspace
+     (jaspace-highlight-jaspace-face   ((t (:foreground "#687888" :background "#000"))))
+     (jaspace-highlight-tab-face       ((t (:foreground "#687888" :background "#000" :underline t))))
+     (trailing-whitespace              ((t (:foreground "#687888" :background "#000" :underline t))))
+
+;;      (next-error ((t (:background "blue"))))
+;;      (nobreak-space ((t (:foreground "cyan" :underline t))))
+;;      (primary-selection ((t (:background "blue"))))
+;;      (query-replace ((t (:background "blue"))))
+;;      (scroll-bar ((t (nil))))
+;;      (search-buffers-face ((t (:bold t :background "SkyBlue" :foreground "Black" :weight bold))))
+;;      (search-buffers-header-face ((t (:bold t :background "gray20" :foreground "azure3" :weight bold))))
+;;      (secondary-selection ((t (:background "slateblue"))))
+;;      (shadow ((t (:foreground "grey70"))))
+;;      (tool-bar ((t (:background "grey75" :foreground "black" :box (:line-width 1 :style released-button)))))
+;;      (tooltip ((t (:family "helv" :background "lightyellow" :foreground "black"))))
+;;      (trailing-whitespace ((t (:background "red1"))))
+;;      (underline ((t (:underline t))))
+;;      (variable-pitch ((t (:family "helv"))))
+;;      (vertical-border ((t (nil))))
+;;      (widget-button ((t (:bold t :weight bold))))
+;;      (widget-button-pressed ((t (:foreground "red"))))
+;;      (widget-documentation ((t (:foreground "lime green"))))
+;;      (widget-field ((t (:background "dim gray"))))
+;;      (widget-inactive ((t (:foreground "light gray"))))
+;;      (widget-single-line-field ((t (:background "dim gray"))))
+;;      (zmacs-region ((t (:background "blue")))))))
+
+))
+     ;; diff-mode
+  (add-hook 'diff-mode-hook
+        (lambda ()
+          (set-face-foreground 'diff-file-header-face "light goldenrod")
+          (set-face-foreground 'diff-index-face "thistle")
+          (set-face-foreground 'diff-hunk-header-face "plum")
+          (set-face-foreground 'diff-removed-face "pink")
+          (set-face-background 'diff-removed-face "gray26")
+          (set-face-foreground 'diff-added-face "light green")
+          (set-face-background 'diff-added-face "gray26")
+          (set-face-foreground 'diff-changed-face "DeepSkyBlue1")
+          ))
+)
+(add-to-list 'color-themes '(color-theme-darkneon256  "Dark Neon 256" "hyone"))

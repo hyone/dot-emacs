@@ -1,0 +1,6 @@
+# name:  ..sourcecode:: ...
+# key: so
+# --
+.. sourcecode:: ${1:mode}
+
+   $0

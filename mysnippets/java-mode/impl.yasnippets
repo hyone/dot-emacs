@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: implements ...
+# key: impl
+# group: structure
+# --
+implements $0

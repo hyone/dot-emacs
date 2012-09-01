@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: sub ... { my $self = shift; ... }
+# key: sub
+# --
+sub ${1:name}${1:$(if (> (string-width text) 0) " " "")}{
+my $self = shift;
+$0
+}

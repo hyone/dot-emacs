@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: function foo() { ... }
+# key: fun
+# --
+function${1:$(if (> (string-width text) 0) " " "")}${1:name}($2) {$0}

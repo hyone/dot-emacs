@@ -1,0 +1,4 @@
+# name: sub ... { ... }
+# key: sub
+# --
+sub ${1:name}${1:$(if (> (string-width text) 0) " " "")}{$0}
