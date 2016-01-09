@@ -1,3 +1,6 @@
+# DEPRECATION #
+This repository is deprecated. the new repository is https://github.com/hyone/dot.emacs .
+
 # My Emacs Dotfiles #
 
 ## License ##
